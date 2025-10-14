@@ -1,21 +1,31 @@
 import logo from "./imgLogo/logo.png";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom"; 
 
-function NavBar(){
+
+function NavBar() {
   return (
-    <nav>
-      <div><img className="logosport" src={logo} alt="logo"/></div>
-     
-     <ul>
-      <li><a href="#">Camisetas</a></li>
-      <li><a href="#">Camisetas Retro</a></li>
-      <li><a href="#">Calentadores</a></li>
-      <li><a href="#">Chompas</a></li>
-      <li><a href="#">Balones</a></li>
-    </ul>
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <Link to="/">
+          <img className="logo-img" src={logo} alt="Logo Deportivo Quito" />
+        </Link>
+      </div>
 
-      <div className="cartContainer"><CartWidget /></div>
+      <ul className="navbar-links">
+        <li><Link to="/category/Camisetas">Camisetas</Link></li>
+        <li><Link to="/category/Shorts">Shorts</Link></li>
+        <li><Link to="/category/Portero">Portero</Link></li>
+        <li><Link to="/category/Entrenamiento">Entrenamiento</Link></li>
+        <li><Link to="/category/Abrigo">Abrigo</Link></li>
+        <li><Link to="/category/Accesorios">Accesorios</Link></li>
+      </ul>
+
+      <div className="cart-container">
+        <CartWidget />
+      </div>
     </nav>
-  )
+  );
 }
+
 export default NavBar;

@@ -1,0 +1,36 @@
+.item-card {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s ease;
+  border: 1px solid #444;
+}
+
+.item-card:hover {
+  transform: scale(1.02);
+}
+
+.item-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.btn-detalle {
+  background-color: #ff2288;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-detalle:hover {
+  background-color: #e61e78;
+}
